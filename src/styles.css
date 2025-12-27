@@ -1,0 +1,13 @@
+ytd-guide-entry-renderer a[title="Shorts"],
+ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+    display: none !important;
+}
+
+ytd-rich-shelf-renderer[is-shorts], 
+ytd-reel-shelf-renderer {
+    display: none !important;
+}
+
+yt-tab-shape[tab-title="Shorts"] {
+    display: none !important;
+}
