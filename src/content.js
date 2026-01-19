@@ -5,13 +5,17 @@ function redirectShorts() {
     }
 }
 
+function removeShorts(){
+    const shortsShelves = document.querySelectorAll('ytd-rich-shelf-renderer[is-shorts], ytd-reel-shelf-renderer');
+    shortsShelves.forEach(el => el.remove());
+}
+
 redirectShorts();
+removeShorts();
 
 const observer = new MutationObserver(() => {
     redirectShorts();
-    
-    const shortsShelves = document.querySelectorAll('ytd-rich-shelf-renderer[is-shorts], ytd-reel-shelf-renderer');
-    shortsShelves.forEach(el => el.remove());
+    removeShorts();
 });
 
 observer.observe(document.body, {
