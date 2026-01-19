@@ -11,3 +11,9 @@ ytd-reel-shelf-renderer {
 yt-tab-shape[tab-title="Shorts"] {
     display: none !important;
 }
+
+grid-shelf-view-model,
+ytd-rich-shelf-renderer[is-shorts], 
+ytd-reel-shelf-renderer {
+    display: none !important;
+}
