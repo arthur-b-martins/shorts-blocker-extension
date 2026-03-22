@@ -6,17 +6,22 @@ function redirectShorts() {
 }
 
 function removeShorts() {
-    // Lista de seletores atualizada com o novo container da busca
-    const selectors = [
+    const simpleSelectors = [
         'ytd-rich-shelf-renderer[is-shorts]', 
         'ytd-reel-shelf-renderer',
-        'grid-shelf-view-model', 
-        'ytd-shelf-renderer:has(span#title-text:contains("Shorts"))'
+        'grid-shelf-view-model'
     ];
 
-    selectors.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => el.remove());
+    simpleSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => el.remove());
+    });
+
+    const shelves = document.querySelectorAll('ytd-shelf-renderer');
+    shelves.forEach(shelf => {
+        const titleSpan = shelf.querySelector('#title-text');
+        if (titleSpan && titleSpan.textContent.includes('Shorts')) {
+            shelf.remove();
+        }
     });
 }
 
