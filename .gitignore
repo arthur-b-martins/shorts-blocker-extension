@@ -1,1 +1,5 @@
+toDo.txt
+*.crx
+*.pem
+*.zip
 src/*[a-zA-Z].png
