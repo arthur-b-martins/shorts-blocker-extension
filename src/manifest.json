@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Shorts Blocker",
-  "version": "0.1",
+  "version": "1.0",
   "description": "Removes Shorts from YouTube feed and redirects Shorts videos to the normal player.",
   "permissions": ["activeTab", "scripting"],
   "content_scripts": [
